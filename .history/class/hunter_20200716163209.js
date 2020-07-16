@@ -1,0 +1,1 @@
+class Hunter extends traveler
