@@ -12,12 +12,16 @@ class Hunter extends Traveler {
     }
 
     eat() {
-        if (this.food > 1) {
+        if (this.food > 0) {
             this.food = this.food - 2
-        }   else {
-            this.food = 0
+        }   
+        else {
             this.isHealthy = false
         }
+        if (this.food < 0) {
+            this.food = 0
+        }
+    
     }
         //consumes 2 units of food. If the hunter doesn't have 2
         //food when they are instructed to eat, they eat as much

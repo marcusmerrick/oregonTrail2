@@ -15,7 +15,6 @@ class Hunter extends Traveler {
         if (this.food > 1) {
             this.food = this.food - 2
         }   else {
-            this.food = 0
             this.isHealthy = false
         }
     }

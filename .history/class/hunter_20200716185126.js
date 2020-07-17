@@ -12,10 +12,12 @@ class Hunter extends Traveler {
     }
 
     eat() {
-        if (this.food > 1) {
+        if (this.food > 0) {
             this.food = this.food - 2
-        }   else {
+        }   if (this.food < 0) {
             this.food = 0
+        }
+            else {
             this.isHealthy = false
         }
     }
@@ -26,15 +28,12 @@ class Hunter extends Traveler {
     
 
     giveFood(Traveler, numOfFoodUnits) {
-        
-        //second if is not needed, **take a look**    
-
-            if (this.food >= numOfFoodUnits) {
+            this.numOfFoodUnits = numOfFoodUnits
+            
+            if (this.food >= Traveler.food) {
                 Traveler.food = (Traveler.food + numOfFoodUnits)
-                if (this.food >= numOfFoodUnits) {
-                    this.food = (this.food - numOfFoodUnits)
-                }    
-            } else {}
+            } if ()
+             else {}
 
         //transfers numOfFoodUnits from the hunter to the traveler.
         //If the hunter doesn't have enough food, then no food
